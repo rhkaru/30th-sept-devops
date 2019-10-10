@@ -5,7 +5,7 @@ import java.net.URL
 
 node{
     stage('Git Checkout'){
-        git 'https://github.com/npsoni88/DevOpsClassCodes.git'
+        git 'https://github.com/rhkaru/DevOpsClassCodes.git'
         //can have any name for 'Git Checkout' 
     }
     stage('Compile'){
