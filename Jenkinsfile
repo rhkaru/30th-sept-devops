@@ -2,6 +2,7 @@
 
 import java.net.URL
 
+
 node{
     stage('Git Checkout'){
         git 'https://github.com/npsoni88/DevOpsClassCodes.git'
