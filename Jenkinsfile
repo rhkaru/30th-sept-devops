@@ -7,13 +7,13 @@ node{
         git 'https://github.com/npsoni88/DevOpsClassCodes.git'
     }
     stage('Compile'){
-        withMaven(maven:'myMaven'){
+        withMaven(maven:'mymaven'){
             sh 'mvn compile'
         }
     }
     stage('Test'){
         try{
-            withMaven(maven:'myMaven'){
+            withMaven(maven:'mymaven'){
                 sh 'mvn test'
             }
         } finally{
@@ -21,7 +21,7 @@ node{
         } 
     }
     stage('Package'){
-        withMaven(maven:'myMaven'){
+        withMaven(maven:'mymaven'){
             sh 'mvn package'
         }
     }
