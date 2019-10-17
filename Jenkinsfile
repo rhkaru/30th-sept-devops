@@ -45,6 +45,11 @@ node{
         withMaven(maven:'mymaven'){
             sh 'mvn package'
         }
+    stage ('build-docker-image'){
+          sh 'cp /var/lib/jenkins/workspace/MyPipeline/target/addressbook.war .; sudo docker build . -t rhkaru/addressbook:$BUILD_NUMBER; sudo docker push rhkaru/addressbook:$BUILD_NUMBER'  
+          
+           
+    }    
     }
    
 }
